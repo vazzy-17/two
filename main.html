@@ -1,1 +1,82 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.navbar_head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.navbar_head label, .navbar_head a {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+.navbar_head label:hover, .navbar_head a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.navbar_head, .content_tengah {
+    width: 100%;
+    max-width: 1200px; /* Lebar maksimal yang sama untuk navbar dan konten */
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.content_tengah {
+    margin-top: 20px; /* Menambahkan jarak dari navbar */
+    display: flex;
+    justify-content: space-between; /* Memisahkan konten di kiri dan kanan */
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content_tengah p {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+.content_kanan {
+    background-color: #3a1010;
+    padding: 10px;
+    border-radius: 8px;
+}
+</style>
+
+
+    <title>Halaman Sederhana</title>
+</head>
+<body>
+    <div class="navbar_head">
+        <label>HOME</label>
+        <label>1</label>
+        <label>1</label>
+        <label>1</label>
+        <label>1</label>
+        <a href="login/login.html">Log in</a> <!-- Mengubah label menjadi tautan -->
+    </div>
+    <div class="content_tengah">
+        <p>berada di tengah</p>
+        <div class="content_kanan">
+            <p>berada di kanan</p>
+        </div>
+    </div>
+</body>
+</html>
