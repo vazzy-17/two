@@ -42,7 +42,14 @@
 }
 
 /* Sidebar Styling */
-.leftSide, .rightSide {
+.leftSide {
+  background-color: #e9ecef;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.rightSide {
   background-color: #e9ecef;
   padding: 16px;
   border-radius: 8px;
@@ -155,3 +162,9 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+/* Menyembunyikan konten berita */
+.news-content {
+  display: none; /* Sembunyikan konten saat halaman dimuat */
+}
+
