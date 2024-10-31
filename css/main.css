@@ -1,0 +1,157 @@
+
+/* Layout Grid Container */
+.layout {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "leftSide body rightSide"
+    "footer footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  padding: 16px;
+  background-color: #f8f9fa;
+}
+
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-areas:
+      "header"
+      "body"
+      "leftSide"
+      "rightSide"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto auto;
+  }
+}
+
+/* Header Styling */
+.header {
+  grid-area: header;
+  background-color: #007bff;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Sidebar Styling */
+.leftSide, .rightSide {
+  background-color: #e9ecef;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+/* Body Content Styling */
+.body {
+  grid-area: body;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Footer Styling */
+.footer {
+  grid-area: footer;
+  background-color: #343a40;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+  font-size: 0.9em;
+  border-radius: 8px;
+}
+
+/* Hover Effects */
+.header:hover, .footer:hover {
+  background-color: #0056b3;
+}
+
+.leftSide:hover, .rightSide:hover, .body:hover {
+  background-color: #dee2e6;
+}
+
+/* Typography */
+.header, .footer {
+  font-family: Arial, sans-serif;
+}
+
+.body {
+  font-family: Georgia, serif;
+}
+
+.leftSide, .rightSide, .body {
+  line-height: 1.6;
+}
+
+/* Navigation Styling */
+.nav {
+  display: flex;
+  align-items: center; /* Menjaga semua item dalam satu garis */
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav a i {
+  margin-right: 5px; /* Menambahkan jarak antara ikon dan teks */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #007bff;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
