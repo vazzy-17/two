@@ -56,23 +56,17 @@ body {
     padding: 20px; /* Padding di sekitar konten utama */
 }
 
-.right-bar {
-    flex: 1; /* Mengatur lebar sidebar */
-    background-color: #f0f0f0; /* Warna latar belakang sidebar */
-    padding: 20px; /* Padding di sekitar sidebar */
-    border-left: 1px solid #ccc; /* Garis pemisah antara konten utama dan sidebar */
+.row {
+    display: flex;
+    justify-content: space-between;
 }
 
-h1 {
-    margin-bottom: 20px; /* Margin bawah untuk judul */
-}
-
-h2 {
-    margin-bottom: 10px; /* Margin bawah untuk judul sidebar */
-}
-
-p {
-    line-height: 1.6;
+.column {
+    flex: 1; /* Mengatur kolom agar memiliki lebar yang sama */
+    margin: 10px; /* Memberikan jarak antar kolom */
+    padding: 20px;
+    background-color: #f2f2f2; /* Warna latar belakang untuk kolom */
+    border-radius: 5px; /* Sudut kolom yang membulat */
 }
 
 /* Gaya untuk footer */
